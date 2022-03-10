@@ -1,0 +1,27 @@
+This repo contains the final assignment for Rachel Corr for the Neuroanalytics course.
+
+Because the data for my subjects is private, I have created randomized data for
+each of the variables I'm looking at - which means the graphs/statistical results 
+generated will not match the graphs I display in class, but I can upload those
+figures/results to Sakai if desired. 
+
+The code was written out in 3 main steps: 
+
+    1. ExtractFromMIST.R - this does not need to be run since I uploaded the random
+    results file, but originally this script took the fMRI activity output for 
+    my ROIs from the FSL software output as well as other demographic or 
+    physiological data from a redcap from excel and combined it into one excel sheet.
+    For the purposes of testing my data - the output of this sheet would be the
+    "MISTReformatedDataRandom.xlsx" sheet currently uploaded. 
+    
+    2. MISTStats.R - this script takes the reformated data from that 
+    "MISTReformatedDataRandom.xlsx" output and runs a series of data analyses
+    including tests showing heart rate and self-reported stress ratings (with 
+    the real data) significantly changed after stress and robust linear regressions
+    with Sex, Age, Change in HRV,Cortisol Responder Status, and Trait Anxiety (STAIT)
+    predicting activity in each of my ROIs. It outputs 2 .txt files with statistical
+    results and "MISTReformatedDataStatsRandom.xlsx" which shows the includes
+    for each lmrob model. 
+    
+    3. MISTGraphs.R - this script takes the output from the prior 2 scripts and 
+    creates the graphs seen in my presentation and saves them as .png files. 

@@ -1,6 +1,6 @@
 # Acute Stress Data Analysis
 These are the scripts (mainly written in R) used for the 4 manuscripts included in Rachel Corr's dissertation analyses. 
-Because data used are protected, no data files are uploaded publically on git, but information is available upon request.
+Because data used are protected, no data files are uploaded publicly on git, but information is available upon request.
 
 ## Chapter 2 - Stress RLMs
 Chapter 2 of my dissertation was previously published in *NeuroImage: Clinical* in a manuscript entitled ["Neural mechanisms of acute stress and trait anxiety in adolescents"](https://doi.org/10.1016/j.nicl.2020.102543).
@@ -24,23 +24,32 @@ Example: Figure 3
 
 ![Figure 3](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/scan/PAP/10.1093_scan_nsab129/2/nsab129f3.jpeg?Expires=1649978955&Signature=Nz4dh4XC4aI7dMrXPKfqBDRrlmwQnyjLHW3jBQHxjJ1Wk3f3FFsbfUOvabUUe65lKrkjieccQBnk~UCsdCRnDtrRr1uDdGFx0QQqPdEhVFzx4Oy60jahUO26y1brlDQdIaVRc9XeKdZlYlbqA29gh3UItO8RVOfmUChn2p8WSm7kjCNGNgOMGHJyaoJ4DK6TTygqOgsKdkWhJbv5AKzBH2L~y~Jp7RdOgtqiArOfsXZKvIKU7pDTgiqIAT~9lvtfCwkmVraPaBCEhW4QcHqM8xwsl9rgd~aSwaxqf8xHFc1dDduTMFTLMykOnJd7rnD8ISvCG1Tj-UxNluuoelbmEQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
 ## Chapter 4 - Stress Functional Connectivity
-Chapter 4 of my dissertation is currently in press at *Biological Psychiatry: Cognitive Neurosceince and Neuroimaging* in a manuscript entitled "Triple Network Functional Connectivity During Acute Stress in Adolescents and the Influence of Polyvictimization". 
+Chapter 4 of my dissertation is currently in press at *Biological Psychiatry: Cognitive Neuroscience and Neuroimaging* in a manuscript entitled "Triple Network Functional Connectivity During Acute Stress in Adolescents and the Influence of Polyvictimization". 
 
 The main analyses for this paper were run using the CONN Toolbox (in MATLAB), with a mix of scripting and using the CONN GUI. Demographic analyses were run with `DemographicsMISTFC_20220111.R` and Figure 3 was made with `GraphPolyvictPCC_20220111.R`.
 
-`CONN20_FindingNetworks_Paste.py` uses a tkinter interface to take pasted output of rows of region names from the CONN Toolbox. Then, CONN Atlas information in `FindNetworksKey.xlsx` is used to identify what neural network is associated with that region, and the program prints this information.
-For example, pasting
+`CONN20_FindingNetworks_Paste.py` uses a simple tkinter interface to take pasted output of rows of region names from the CONN Toolbox. Then, CONN Atlas information in `FindNetworksKey.xlsx` is used to identify what neural network is associated with that region, and the program prints this information.
+For example, pasting:
 ```
-64 voxels (86%) covering 2% of atlas.MidFG l (Middle Frontal Gyrus Left)
-9 voxels (12%) covering 0% of atlas.SFG l (Superior Frontal Gyrus Left)
-1 voxels (1%) covering 0% of atlas.not-labeled
+89 voxels (44%) covering 3% of atlas.SFG l (Superior Frontal Gyrus Left)
+32 voxels (16%) covering 1% of atlas.SFG r (Superior Frontal Gyrus Right)
+21 voxels (10%) covering 0% of atlas.FP r (Frontal Pole Right)
+20 voxels (10%) covering 1% of atlas.PaCiG r (Paracingulate Gyrus Right)
+5 voxels (2%) covering 0% of atlas.FP l (Frontal Pole Left)
+5 voxels (2%) covering 0% of atlas.PaCiG l (Paracingulate Gyrus Left)
+30 voxels (15%) covering 0% of atlas.not-labeled
 ```
 into the interface and hitting "Submit" outputs:
 ```
-MidFG L: FPN (64 voxels)
-SFG L: FPN (9 voxels)
-Not Labeled (1 voxel)
+SFG L: FPN (89 voxels)
+SFG R: FPN (32 voxels)
+FP R: FPN (21 voxel)
+PaCiG R: Paracingulate (20 voxels)
+FP L: FPN (5 voxels)
+PaCiG L: Paracingulate (5 voxels)
+Not Labeled (30 voxels)
 ```
+which indicates that the left and right superior frontal gyri and frontal poles are members of the FPN (Frontoparietal Network) and the left and right paracingulate gyri are part of the Paracingulate Network.
 
 
 ## Chapter 5 - Resting-State Functional Connectivity

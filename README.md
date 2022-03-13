@@ -24,7 +24,7 @@ Example: Figure 3
 
 ![Figure 3](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/scan/PAP/10.1093_scan_nsab129/2/nsab129f3.jpeg?Expires=1649978955&Signature=Nz4dh4XC4aI7dMrXPKfqBDRrlmwQnyjLHW3jBQHxjJ1Wk3f3FFsbfUOvabUUe65lKrkjieccQBnk~UCsdCRnDtrRr1uDdGFx0QQqPdEhVFzx4Oy60jahUO26y1brlDQdIaVRc9XeKdZlYlbqA29gh3UItO8RVOfmUChn2p8WSm7kjCNGNgOMGHJyaoJ4DK6TTygqOgsKdkWhJbv5AKzBH2L~y~Jp7RdOgtqiArOfsXZKvIKU7pDTgiqIAT~9lvtfCwkmVraPaBCEhW4QcHqM8xwsl9rgd~aSwaxqf8xHFc1dDduTMFTLMykOnJd7rnD8ISvCG1Tj-UxNluuoelbmEQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
 ## Chapter 4 - Stress Functional Connectivity
-Chapter 4 of my dissertation is currently in press at *Biological Psychiatry: Cognitive Neuroscience and Neuroimaging* in a manuscript entitled "Triple Network Functional Connectivity During Acute Stress in Adolescents and the Influence of Polyvictimization". 
+Chapter 4 of my dissertation was published in *Biological Psychiatry: Cognitive Neuroscience and Neuroimaging* in a manuscript entitled ["Triple Network Functional Connectivity During Acute Stress in Adolescents and the Influence of Polyvictimization"](https://doi.org/10.1016/j.bpsc.2022.03.003). 
 
 The main analyses for this paper were run using the CONN Toolbox (in MATLAB), with a mix of scripting and using the CONN GUI. Demographic analyses were run with `DemographicsMISTFC_20220111.R` and Figure 3 was made with `GraphPolyvictPCC_20220111.R`.
 
